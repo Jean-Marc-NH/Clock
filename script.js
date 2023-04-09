@@ -44,11 +44,25 @@ setInterval(()=>{
     {
         hours = hours - 12;
     }
-
-    _numHour.innerHTML = hours;
-    _numMin.innerHTML = min;
-    _numSeg.innerHTML = seg;
     
+    if(hours < 10){
+        _numHour.innerHTML = `0${hours}`;
+    }else{
+        _numHour.innerHTML = `${hours}`;
+    }
+
+    if(min < 10){
+        _numMin.innerHTML = `0${min}`;
+    }else{
+        _numMin.innerHTML = `${min}`;
+    }
+
+    if(seg < 10){
+        _numSeg.innerHTML = `0${seg}`;
+    }else{
+        _numSeg.innerHTML = `${seg}`;
+    }
+
     _seg.style.transform = `rotate(${seg * 6}deg)`;
     _min.style.transform = `rotate(${min * 6}deg)`;
     _hours.style.transform = `rotate(${hours * 30}deg)`;
