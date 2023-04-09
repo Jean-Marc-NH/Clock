@@ -1,16 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+
+:root{
+    --first-color: rgb(243, 177, 33);
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
 }
 
 .reloj{
-    max-width: 800px;
-    max-height: 800px;
+    max-width: 700px;
+    max-height: 700px;
     height: 100%;
     width: 100%;
     margin: auto;
     margin-top: 10px;
-    border: black 5px solid;
+    border: var(--first-color) 5px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,18 +45,21 @@
 }
 
 .seg{
-    height: 60%;
+    max-height: 60%;
+    height: 60vw;
     width: 1px;
-    z-index: 100;
+    z-index: 3;
 }
 
 .min{
-    height: 50%;
+    max-height: 60%;
+    height: 50vw;
     
 }
 
 .hours{
-    height: 40%;
+    max-height: 60%;
+    height: 40vw;
     width: 10px;
 }
 
@@ -79,10 +89,6 @@
     background-color: black;
 }
 
-.num{
-    position: absolute;
-}
-
 .full-container{
     align-items: center;
     display: flex;
@@ -90,7 +96,7 @@
 }
 
 .resize{
-    background-color: rgb(235, 235, 235);
+    background-color: var(--first-color);
     border: solid black 1px;
     padding: 10px;
     width: 150px;
@@ -100,8 +106,34 @@
     -moz-transition: 0.3s ease all;
     -ms-transition: 0.3s ease all;
     -o-transition: 0.3s ease all;
+    font-family:sans-serif;
 }
 
 .resize:hover{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 202, 30);
+}
+
+.centro{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+    z-index: 10;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.num{
+    font-size: 60px;
+    font-family: 'Rajdhani';
+}
+
+.reloj-num{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    margin: 10px;
 }

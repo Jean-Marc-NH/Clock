@@ -4,6 +4,9 @@ const _hours = document.querySelector(".hours");
 const _reloj = document.querySelector(".reloj");
 const _resize = document.querySelector(".resize");
 
+const _numSeg = document.querySelector(".num-seg");
+const _numMin = document.querySelector(".num-min");
+const _numHour = document.querySelector(".num-hour");
 
 
 
@@ -33,14 +36,21 @@ setInterval(()=>{
 
     let time = new Date();
 
-    seg = time.getSeconds();
-    min = time.getMinutes();
-    hours = time.getHours();
+    let seg = time.getSeconds();
+    let min = time.getMinutes();
+    let hours = time.getHours();
 
+    if(hours >= 12)
+    {
+        hours = hours - 12;
+    }
 
+    _numHour.innerHTML = hours;
+    _numMin.innerHTML = min;
+    _numSeg.innerHTML = seg;
     
-    _seg.style.transform = `rotate(${seg * 6}deg)`
-    _min.style.transform = `rotate(${min * 6}deg)`
-    _hours.style.transform = `rotate(${hours * 6}deg)`
+    _seg.style.transform = `rotate(${seg * 6}deg)`;
+    _min.style.transform = `rotate(${min * 6}deg)`;
+    _hours.style.transform = `rotate(${hours * 30}deg)`;
 
 }, 1000)
