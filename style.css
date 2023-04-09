@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.reloj{
+    max-width: 800px;
+    max-height: 800px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    border: black 5px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.manija{
+    background-color: none;
+    position: absolute;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.cover{
+    height: 60%;
+    /* width: 100%; */
+    box-shadow: none;
+}
+
+.seg{
+    height: 60%;
+    width: 1px;
+    z-index: 100;
+}
+
+.min{
+    height: 50%;
+    
+}
+
+.hours{
+    height: 40%;
+    width: 10px;
+}
+
+.seg .cover{
+    background-color: red;
+    width: 3px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.hours .cover{
+    background-color: none;
+    border: 2px black solid;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.min .cover{
+    width: 6px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.num{
+    position: absolute;
+}
+
+.full-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.resize{
+    background-color: rgb(235, 235, 235);
+    border: solid black 1px;
+    padding: 10px;
+    width: 150px;
+    margin: 20px;
+    transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -ms-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+}
+
+.resize:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
